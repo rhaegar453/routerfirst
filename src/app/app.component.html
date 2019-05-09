@@ -2,5 +2,9 @@
   <u><b>RouterFirst App</b></u>
 </h1>
 
+<div class="centeredCss">
+  <button class="btn btn-primary" (click)="submitted()">Click Me</button>
+  <p *ngIf="clicked">You have clicked the Button</p>
+</div>
 
 <router-outlet></router-outlet>
