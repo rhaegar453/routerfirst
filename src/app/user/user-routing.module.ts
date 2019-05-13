@@ -8,10 +8,13 @@ import { UserComplianceComponent } from '../Components/user-compliance/user-comp
 
 const routes: Routes = [
   // {path:'', component:UserComponentComponent},
-  { path: '', component: UserComponentComponent },
-  {path:'dashboard', component:UserDashboardComponent},
-  {path:'management', component:UserManagementComponent},
-  {path:'compliance', component:UserComplianceComponent}
+  { path: '', component: UserComponentComponent , children:[
+    {path:'', redirectTo:'user/home', pathMatch:'full'},
+    {path:'home', component:UserComponentComponent},
+    {path:'dashboard', component:UserDashboardComponent},
+    {path:'management', component:UserManagementComponent},
+    {path:'compliance', component:UserComplianceComponent}
+  ]}
 ];
 
 @NgModule({
